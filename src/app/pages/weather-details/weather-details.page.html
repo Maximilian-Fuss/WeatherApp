@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>5 Day Forecast</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list *ngFor="let days of weatherDataDetails.day">
+      <div *ngFor="let hours of days.hour">
+        <ion-item-group>
+          {{hours.currentTemp}}°C
+          <img src = "http://openweathermap.org/img/wn/{{hours.icon}}@2x.png" alt = "Site Logo" widht="50" height="50">
+          {{hours.date}}
+        </ion-item-group>
+
+      </div>
+    </ion-list>
+</ion-content>
