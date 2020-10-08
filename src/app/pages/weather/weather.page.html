@@ -5,9 +5,9 @@
 </ion-header>
 
 <ion-content>
-
-  <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)"></ion-searchbar>
-
+  
+   <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)"></ion-searchbar>
+   
 <ion-card button *ngIf="weatherData.cityName != 'NULL'" [routerLink]="['/','weather',weatherData.id]">
   <ion-card-header>
     <ion-card-title>
